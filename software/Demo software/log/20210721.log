@@ -1,0 +1,621 @@
+¡¾14:43:51:597¡¿---- PacketNetSnd:UDP Send:40 03 0F 00 AE 
+¡¾14:43:51:601¡¿---- sentU:5,select=1
+¡¾14:43:51:607¡¿---- PacketNetRcv:UDP Recw:F0 02 0F FF 
+¡¾14:43:51:617¡¿---- PacketNetRcv:UDP Recv:F0 02 0F FF 
+¡¾14:43:51:621¡¿---- ==============================******************************* Get version **************************************************
+¡¾14:43:51:632¡¿---- PacketNetSnd:UDP Send:40 02 02 BC 
+¡¾14:43:51:636¡¿---- sentU:4,select=1
+¡¾14:43:51:643¡¿---- PacketNetRcv:UDP Recw:F0 06 02 03 00 07 01 FD 
+¡¾14:43:51:648¡¿---- PacketNetRcv:UDP Recv:F0 06 02 03 00 07 01 FD 
+¡¾14:43:51:653¡¿---- ==============================*************************************Read pagram manual*************************************
+¡¾14:43:51:657¡¿---- PacketNetSnd:UDP Send:40 02 06 B8 
+¡¾14:43:51:664¡¿---- sentU:4,select=1
+¡¾14:43:51:669¡¿---- PacketNetRcv:UDP Recw:F0 22 06 08 05 01 3F 00 01 01 64 04 00 00 01 C0 A8 00 64 07 B1 FF FF FF 00 C0 A8 00 01 01 02 03 04 05 06 31 
+¡¾14:43:51:674¡¿---- PacketNetRcv:UDP Recv:F0 22 06 08 05 01 3F 00 01 01 64 04 00 00 01 C0 A8 00 64 07 B1 FF FF FF 00 C0 A8 00 01 01 02 03 04 05 06 31 
+¡¾14:43:51:678¡¿---- ==============================
+¡¾14:43:51:683¡¿---- PacketNetSnd:UDP Send:40 02 87 37 
+¡¾14:43:51:687¡¿---- sentU:4,select=1
+¡¾14:43:51:692¡¿---- PacketNetRcv:UDP Recw:F0 03 87 00 86 
+¡¾14:43:51:696¡¿---- PacketNetRcv:UDP Recv:F0 03 87 00 86 
+¡¾14:43:51:701¡¿---- ==============================*****************************Read auto param*****************************
+¡¾14:43:51:706¡¿---- PacketNetSnd:UDP Send:40 02 14 AA 
+¡¾14:43:51:710¡¿---- sentU:4,select=1
+¡¾14:43:51:714¡¿---- PacketNetRcv:UDP Recw:F0 22 14 00 00 00 02 00 64 00 00 28 C8 08 00 78 00 00 01 00 C0 A8 00 3D 13 88 00 00 00 00 00 00 00 00 00 C3 
+¡¾14:43:51:718¡¿---- PacketNetRcv:UDP Recv:F0 22 14 00 00 00 02 00 64 00 00 28 C8 08 00 78 00 00 01 00 C0 A8 00 3D 13 88 00 00 00 00 00 00 00 00 00 C3 
+¡¾14:43:51:723¡¿---- ==============================************************select antena*********************************
+¡¾14:43:57:213¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:57:220¡¿---- sentU:5,select=1
+¡¾14:43:57:226¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:57:230¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:57:234¡¿---- ==============================
+¡¾14:43:57:316¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:57:322¡¿---- sentU:5,select=1
+¡¾14:43:57:328¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:57:332¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:57:337¡¿---- ==============================********************************* List Tag ID ***************************************
+¡¾14:43:57:341¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:43:57:843¡¿---- sentU:8,select=1
+¡¾14:43:57:847¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:43:57:851¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:43:57:856¡¿---- ==============================
+¡¾14:43:57:861¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:57:866¡¿---- sentU:5,select=1
+¡¾14:43:57:871¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:57:875¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:57:880¡¿---- ==============================
+¡¾14:43:57:884¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:43:58:408¡¿---- sentU:8,select=1
+¡¾14:43:58:413¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:43:58:417¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:43:58:422¡¿---- ==============================
+¡¾14:43:58:426¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:58:431¡¿---- sentU:5,select=1
+¡¾14:43:58:435¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:58:440¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:58:445¡¿---- ==============================
+¡¾14:43:58:449¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:43:58:955¡¿---- sentU:8,select=1
+¡¾14:43:58:960¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:43:58:964¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:43:58:968¡¿---- ==============================
+¡¾14:43:58:974¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:58:978¡¿---- sentU:5,select=1
+¡¾14:43:58:982¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:58:987¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:58:992¡¿---- ==============================
+¡¾14:43:58:996¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:43:59:477¡¿---- sentU:8,select=1
+¡¾14:43:59:481¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:43:59:487¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:43:59:491¡¿---- ==============================
+¡¾14:43:59:495¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:43:59:499¡¿---- sentU:5,select=1
+¡¾14:43:59:504¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:43:59:509¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:43:59:513¡¿---- ==============================
+¡¾14:43:59:517¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:00:019¡¿---- sentU:8,select=1
+¡¾14:44:00:024¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:00:028¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:00:032¡¿---- ==============================
+¡¾14:44:00:038¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:00:042¡¿---- sentU:5,select=1
+¡¾14:44:00:046¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:00:050¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:00:055¡¿---- ==============================
+¡¾14:44:00:059¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:00:617¡¿---- sentU:8,select=1
+¡¾14:44:00:624¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:00:628¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:00:633¡¿---- ==============================
+¡¾14:44:00:639¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:00:645¡¿---- sentU:5,select=1
+¡¾14:44:00:649¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:00:655¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:00:660¡¿---- ==============================
+¡¾14:44:00:664¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:01:225¡¿---- sentU:8,select=1
+¡¾14:44:01:229¡¿---- PacketNetRcv:UDP Recw:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:01:234¡¿---- PacketNetRcv:UDP Recv:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:01:239¡¿---- ==============================
+¡¾14:44:01:244¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:01:249¡¿---- sentU:5,select=1
+¡¾14:44:01:254¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:01:259¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:01:263¡¿---- ==============================
+¡¾14:44:01:270¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:01:913¡¿---- sentU:8,select=1
+¡¾14:44:01:917¡¿---- PacketNetRcv:UDP Recw:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:01:922¡¿---- PacketNetRcv:UDP Recv:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:01:927¡¿---- ==============================
+¡¾14:44:01:932¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:01:938¡¿---- sentU:5,select=1
+¡¾14:44:01:943¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:01:947¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:01:954¡¿---- ==============================
+¡¾14:44:01:958¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:02:484¡¿---- sentU:8,select=1
+¡¾14:44:02:489¡¿---- PacketNetRcv:UDP Recw:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:02:494¡¿---- PacketNetRcv:UDP Recv:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 14 DF 
+¡¾14:44:02:498¡¿---- ==============================
+¡¾14:44:02:504¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:02:509¡¿---- sentU:5,select=1
+¡¾14:44:02:514¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:02:520¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:02:525¡¿---- ==============================
+¡¾14:44:02:530¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:03:021¡¿---- sentU:8,select=1
+¡¾14:44:03:026¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:03:030¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:03:035¡¿---- ==============================
+¡¾14:44:03:040¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:03:044¡¿---- sentU:5,select=1
+¡¾14:44:03:048¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:03:053¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:03:058¡¿---- ==============================
+¡¾14:44:03:062¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:03:544¡¿---- sentU:8,select=1
+¡¾14:44:03:548¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:03:554¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:03:558¡¿---- ==============================
+¡¾14:44:03:563¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:03:568¡¿---- sentU:5,select=1
+¡¾14:44:03:573¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:03:577¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:03:582¡¿---- ==============================
+¡¾14:44:03:587¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:04:079¡¿---- sentU:8,select=1
+¡¾14:44:04:084¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:04:089¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:04:093¡¿---- ==============================
+¡¾14:44:04:097¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:04:103¡¿---- sentU:5,select=1
+¡¾14:44:04:107¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:04:112¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:04:116¡¿---- ==============================
+¡¾14:44:04:122¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:04:612¡¿---- sentU:8,select=1
+¡¾14:44:04:618¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:04:626¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:04:630¡¿---- ==============================
+¡¾14:44:04:638¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:04:643¡¿---- sentU:5,select=1
+¡¾14:44:04:647¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:04:654¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:04:659¡¿---- ==============================
+¡¾14:44:04:663¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:05:121¡¿---- sentU:8,select=1
+¡¾14:44:05:126¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:05:130¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:05:136¡¿---- ==============================
+¡¾14:44:05:141¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:05:146¡¿---- sentU:5,select=1
+¡¾14:44:05:152¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:05:157¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:05:162¡¿---- ==============================
+¡¾14:44:05:168¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:05:631¡¿---- sentU:8,select=1
+¡¾14:44:05:638¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:05:642¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:05:647¡¿---- ==============================
+¡¾14:44:05:667¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:05:673¡¿---- sentU:5,select=1
+¡¾14:44:05:677¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:05:682¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:05:687¡¿---- ==============================
+¡¾14:44:05:691¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:06:187¡¿---- sentU:8,select=1
+¡¾14:44:06:191¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:06:196¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:06:201¡¿---- ==============================
+¡¾14:44:06:206¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:211¡¿---- sentU:5,select=1
+¡¾14:44:06:215¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾14:44:06:221¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾14:44:06:225¡¿---- ==============================
+¡¾14:44:06:230¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾14:44:06:703¡¿---- sentU:8,select=1
+¡¾14:44:06:708¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾14:44:06:713¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾14:44:06:718¡¿---- ==============================
+¡¾14:44:06:727¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:731¡¿---- connect num is Big!!!
+¡¾14:44:06:736¡¿---- write packet error
+¡¾14:44:06:741¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:745¡¿---- connect num is Big!!!
+¡¾14:44:06:750¡¿---- write packet error
+¡¾14:44:06:800¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:805¡¿---- connect num is Big!!!
+¡¾14:44:06:809¡¿---- write packet error
+¡¾14:44:06:863¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:869¡¿---- connect num is Big!!!
+¡¾14:44:06:873¡¿---- write packet error
+¡¾14:44:06:927¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:931¡¿---- connect num is Big!!!
+¡¾14:44:06:936¡¿---- write packet error
+¡¾14:44:06:990¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:06:995¡¿---- connect num is Big!!!
+¡¾14:44:06:999¡¿---- write packet error
+¡¾14:44:07:052¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:056¡¿---- connect num is Big!!!
+¡¾14:44:07:060¡¿---- write packet error
+¡¾14:44:07:114¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:120¡¿---- connect num is Big!!!
+¡¾14:44:07:124¡¿---- write packet error
+¡¾14:44:07:176¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:181¡¿---- connect num is Big!!!
+¡¾14:44:07:186¡¿---- write packet error
+¡¾14:44:07:238¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:243¡¿---- connect num is Big!!!
+¡¾14:44:07:247¡¿---- write packet error
+¡¾14:44:07:302¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:306¡¿---- connect num is Big!!!
+¡¾14:44:07:311¡¿---- write packet error
+¡¾14:44:07:364¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:370¡¿---- connect num is Big!!!
+¡¾14:44:07:375¡¿---- write packet error
+¡¾14:44:07:427¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:433¡¿---- connect num is Big!!!
+¡¾14:44:07:438¡¿---- write packet error
+¡¾14:44:07:490¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:495¡¿---- connect num is Big!!!
+¡¾14:44:07:499¡¿---- write packet error
+¡¾14:44:07:553¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:558¡¿---- connect num is Big!!!
+¡¾14:44:07:562¡¿---- write packet error
+¡¾14:44:07:616¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:623¡¿---- connect num is Big!!!
+¡¾14:44:07:627¡¿---- write packet error
+¡¾14:44:07:678¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:682¡¿---- connect num is Big!!!
+¡¾14:44:07:688¡¿---- write packet error
+¡¾14:44:07:738¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:742¡¿---- connect num is Big!!!
+¡¾14:44:07:747¡¿---- write packet error
+¡¾14:44:07:801¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:806¡¿---- connect num is Big!!!
+¡¾14:44:07:810¡¿---- write packet error
+¡¾14:44:07:864¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:870¡¿---- connect num is Big!!!
+¡¾14:44:07:874¡¿---- write packet error
+¡¾14:44:07:926¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:931¡¿---- connect num is Big!!!
+¡¾14:44:07:936¡¿---- write packet error
+¡¾14:44:07:988¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:07:994¡¿---- connect num is Big!!!
+¡¾14:44:07:999¡¿---- write packet error
+¡¾14:44:08:050¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:056¡¿---- connect num is Big!!!
+¡¾14:44:08:061¡¿---- write packet error
+¡¾14:44:08:113¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:118¡¿---- connect num is Big!!!
+¡¾14:44:08:123¡¿---- write packet error
+¡¾14:44:08:175¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:180¡¿---- connect num is Big!!!
+¡¾14:44:08:185¡¿---- write packet error
+¡¾14:44:08:290¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:294¡¿---- connect num is Big!!!
+¡¾14:44:08:299¡¿---- write packet error
+¡¾14:44:08:313¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:324¡¿---- connect num is Big!!!
+¡¾14:44:08:329¡¿---- write packet error
+¡¾14:44:08:364¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:375¡¿---- connect num is Big!!!
+¡¾14:44:08:380¡¿---- write packet error
+¡¾14:44:08:426¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:431¡¿---- connect num is Big!!!
+¡¾14:44:08:442¡¿---- write packet error
+¡¾14:44:08:489¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:495¡¿---- connect num is Big!!!
+¡¾14:44:08:505¡¿---- write packet error
+¡¾14:44:08:553¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:558¡¿---- connect num is Big!!!
+¡¾14:44:08:562¡¿---- write packet error
+¡¾14:44:08:614¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:622¡¿---- connect num is Big!!!
+¡¾14:44:08:626¡¿---- write packet error
+¡¾14:44:08:677¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:683¡¿---- connect num is Big!!!
+¡¾14:44:08:689¡¿---- write packet error
+¡¾14:44:08:738¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:743¡¿---- connect num is Big!!!
+¡¾14:44:08:747¡¿---- write packet error
+¡¾14:44:08:800¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:805¡¿---- connect num is Big!!!
+¡¾14:44:08:809¡¿---- write packet error
+¡¾14:44:08:863¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:869¡¿---- connect num is Big!!!
+¡¾14:44:08:874¡¿---- write packet error
+¡¾14:44:08:928¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:933¡¿---- connect num is Big!!!
+¡¾14:44:08:938¡¿---- write packet error
+¡¾14:44:08:989¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:08:994¡¿---- connect num is Big!!!
+¡¾14:44:08:999¡¿---- write packet error
+¡¾14:44:09:050¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:055¡¿---- connect num is Big!!!
+¡¾14:44:09:059¡¿---- write packet error
+¡¾14:44:09:113¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:119¡¿---- connect num is Big!!!
+¡¾14:44:09:124¡¿---- write packet error
+¡¾14:44:09:177¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:182¡¿---- connect num is Big!!!
+¡¾14:44:09:187¡¿---- write packet error
+¡¾14:44:09:239¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:243¡¿---- connect num is Big!!!
+¡¾14:44:09:248¡¿---- write packet error
+¡¾14:44:09:301¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:305¡¿---- connect num is Big!!!
+¡¾14:44:09:310¡¿---- write packet error
+¡¾14:44:09:364¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:371¡¿---- connect num is Big!!!
+¡¾14:44:09:375¡¿---- write packet error
+¡¾14:44:09:428¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:433¡¿---- connect num is Big!!!
+¡¾14:44:09:438¡¿---- write packet error
+¡¾14:44:09:490¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:495¡¿---- connect num is Big!!!
+¡¾14:44:09:501¡¿---- write packet error
+¡¾14:44:09:554¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:558¡¿---- connect num is Big!!!
+¡¾14:44:09:563¡¿---- write packet error
+¡¾14:44:09:619¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:624¡¿---- connect num is Big!!!
+¡¾14:44:09:629¡¿---- write packet error
+¡¾14:44:09:680¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:687¡¿---- connect num is Big!!!
+¡¾14:44:09:691¡¿---- write packet error
+¡¾14:44:09:740¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:745¡¿---- connect num is Big!!!
+¡¾14:44:09:750¡¿---- write packet error
+¡¾14:44:09:805¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:810¡¿---- connect num is Big!!!
+¡¾14:44:09:816¡¿---- write packet error
+¡¾14:44:09:867¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:873¡¿---- connect num is Big!!!
+¡¾14:44:09:878¡¿---- write packet error
+¡¾14:44:09:925¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:930¡¿---- connect num is Big!!!
+¡¾14:44:09:936¡¿---- write packet error
+¡¾14:44:09:989¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:09:994¡¿---- connect num is Big!!!
+¡¾14:44:09:999¡¿---- write packet error
+¡¾14:44:10:053¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:058¡¿---- connect num is Big!!!
+¡¾14:44:10:062¡¿---- write packet error
+¡¾14:44:10:118¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:125¡¿---- connect num is Big!!!
+¡¾14:44:10:130¡¿---- write packet error
+¡¾14:44:10:180¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:187¡¿---- connect num is Big!!!
+¡¾14:44:10:192¡¿---- write packet error
+¡¾14:44:10:243¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:250¡¿---- connect num is Big!!!
+¡¾14:44:10:255¡¿---- write packet error
+¡¾14:44:10:305¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:311¡¿---- connect num is Big!!!
+¡¾14:44:10:319¡¿---- write packet error
+¡¾14:44:10:364¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:371¡¿---- connect num is Big!!!
+¡¾14:44:10:376¡¿---- write packet error
+¡¾14:44:10:427¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:434¡¿---- connect num is Big!!!
+¡¾14:44:10:439¡¿---- write packet error
+¡¾14:44:10:492¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:498¡¿---- connect num is Big!!!
+¡¾14:44:10:504¡¿---- write packet error
+¡¾14:44:10:553¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:559¡¿---- connect num is Big!!!
+¡¾14:44:10:564¡¿---- write packet error
+¡¾14:44:10:615¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:623¡¿---- connect num is Big!!!
+¡¾14:44:10:629¡¿---- write packet error
+¡¾14:44:10:679¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:686¡¿---- connect num is Big!!!
+¡¾14:44:10:692¡¿---- write packet error
+¡¾14:44:10:740¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:746¡¿---- connect num is Big!!!
+¡¾14:44:10:752¡¿---- write packet error
+¡¾14:44:10:804¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:809¡¿---- connect num is Big!!!
+¡¾14:44:10:814¡¿---- write packet error
+¡¾14:44:10:865¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:871¡¿---- connect num is Big!!!
+¡¾14:44:10:876¡¿---- write packet error
+¡¾14:44:10:929¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:935¡¿---- connect num is Big!!!
+¡¾14:44:10:940¡¿---- write packet error
+¡¾14:44:10:988¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:10:994¡¿---- connect num is Big!!!
+¡¾14:44:11:000¡¿---- write packet error
+¡¾14:44:11:053¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:058¡¿---- connect num is Big!!!
+¡¾14:44:11:063¡¿---- write packet error
+¡¾14:44:11:114¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:121¡¿---- connect num is Big!!!
+¡¾14:44:11:125¡¿---- write packet error
+¡¾14:44:11:176¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:181¡¿---- connect num is Big!!!
+¡¾14:44:11:187¡¿---- write packet error
+¡¾14:44:11:239¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:244¡¿---- connect num is Big!!!
+¡¾14:44:11:251¡¿---- write packet error
+¡¾14:44:11:300¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:306¡¿---- connect num is Big!!!
+¡¾14:44:11:312¡¿---- write packet error
+¡¾14:44:11:364¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:370¡¿---- connect num is Big!!!
+¡¾14:44:11:377¡¿---- write packet error
+¡¾14:44:11:426¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾14:44:11:437¡¿---- connect num is Big!!!
+¡¾14:44:11:448¡¿---- write packet error
+¡¾15:48:22:696¡¿---- PacketNetSnd:UDP Send:40 03 0F 00 AE 
+¡¾15:48:22:705¡¿---- sentU:5,select=1
+¡¾15:48:22:711¡¿---- PacketNetRcv:UDP Recw:F0 02 0F FF 
+¡¾15:48:22:721¡¿---- PacketNetRcv:UDP Recv:F0 02 0F FF 
+¡¾15:48:22:726¡¿---- ==============================
+¡¾15:48:22:733¡¿---- PacketNetSnd:UDP Send:40 02 02 BC 
+¡¾15:48:22:738¡¿---- sentU:4,select=1
+¡¾15:48:22:743¡¿---- PacketNetRcv:UDP Recw:F0 06 02 03 00 07 01 FD 
+¡¾15:48:22:751¡¿---- PacketNetRcv:UDP Recv:F0 06 02 03 00 07 01 FD 
+¡¾15:48:22:756¡¿---- ==============================
+¡¾15:48:22:763¡¿---- PacketNetSnd:UDP Send:40 02 06 B8 
+¡¾15:48:22:769¡¿---- sentU:4,select=1
+¡¾15:48:22:774¡¿---- PacketNetRcv:UDP Recw:F0 22 06 08 05 01 3F 00 01 01 64 04 00 00 01 C0 A8 00 64 07 B1 FF FF FF 00 C0 A8 00 01 01 02 03 04 05 06 31 
+¡¾15:48:22:781¡¿---- PacketNetRcv:UDP Recv:F0 22 06 08 05 01 3F 00 01 01 64 04 00 00 01 C0 A8 00 64 07 B1 FF FF FF 00 C0 A8 00 01 01 02 03 04 05 06 31 
+¡¾15:48:22:785¡¿---- ==============================
+¡¾15:48:22:790¡¿---- PacketNetSnd:UDP Send:40 02 87 37 
+¡¾15:48:22:796¡¿---- sentU:4,select=1
+¡¾15:48:22:802¡¿---- PacketNetRcv:UDP Recw:F0 03 87 00 86 
+¡¾15:48:22:807¡¿---- PacketNetRcv:UDP Recv:F0 03 87 00 86 
+¡¾15:48:22:813¡¿---- ==============================
+¡¾15:48:22:818¡¿---- PacketNetSnd:UDP Send:40 02 14 AA 
+¡¾15:48:22:823¡¿---- sentU:4,select=1
+¡¾15:48:22:829¡¿---- PacketNetRcv:UDP Recw:F0 22 14 00 00 00 02 00 64 00 00 28 C8 08 00 78 00 00 01 00 C0 A8 00 3D 13 88 00 00 00 00 00 00 00 00 00 C3 
+¡¾15:48:22:835¡¿---- PacketNetRcv:UDP Recv:F0 22 14 00 00 00 02 00 64 00 00 28 C8 08 00 78 00 00 01 00 C0 A8 00 3D 13 88 00 00 00 00 00 00 00 00 00 C3 
+¡¾15:48:22:840¡¿---- ==============================
+¡¾15:48:28:551¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:28:556¡¿---- sentU:5,select=1
+¡¾15:48:28:562¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:28:567¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:28:572¡¿---- ==============================
+¡¾15:48:28:655¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:28:661¡¿---- sentU:5,select=1
+¡¾15:48:28:666¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:28:672¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:28:677¡¿---- ==============================
+¡¾15:48:28:683¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:29:133¡¿---- sentU:8,select=1
+¡¾15:48:29:138¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:29:144¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:29:150¡¿---- ==============================
+¡¾15:48:29:155¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:29:162¡¿---- sentU:5,select=1
+¡¾15:48:29:167¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:29:172¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:29:178¡¿---- ==============================
+¡¾15:48:29:183¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:29:589¡¿---- sentU:8,select=1
+¡¾15:48:29:595¡¿---- PacketNetRcv:UDP Recw:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 16 DD 
+¡¾15:48:29:601¡¿---- PacketNetRcv:UDP Recv:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 16 DD 
+¡¾15:48:29:606¡¿---- ==============================
+¡¾15:48:29:613¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:29:620¡¿---- sentU:5,select=1
+¡¾15:48:29:628¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:29:635¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:29:642¡¿---- ==============================
+¡¾15:48:29:649¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:30:053¡¿---- sentU:8,select=1
+¡¾15:48:30:060¡¿---- PacketNetRcv:UDP Recw:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 16 DD 
+¡¾15:48:30:065¡¿---- PacketNetRcv:UDP Recv:F0 10 EE 01 06 30 00 E2 00 00 00 00 00 00 00 06 16 DD 
+¡¾15:48:30:070¡¿---- ==============================
+¡¾15:48:30:076¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:30:083¡¿---- sentU:5,select=1
+¡¾15:48:30:089¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:30:096¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:30:102¡¿---- ==============================
+¡¾15:48:30:107¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:30:500¡¿---- sentU:8,select=1
+¡¾15:48:30:505¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:30:511¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:30:516¡¿---- ==============================
+¡¾15:48:30:522¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:30:528¡¿---- sentU:5,select=1
+¡¾15:48:30:533¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:30:538¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:30:544¡¿---- ==============================
+¡¾15:48:30:549¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:30:928¡¿---- sentU:8,select=1
+¡¾15:48:30:934¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:30:939¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:30:944¡¿---- ==============================
+¡¾15:48:30:950¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:30:955¡¿---- sentU:5,select=1
+¡¾15:48:30:961¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:30:967¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:30:972¡¿---- ==============================
+¡¾15:48:30:977¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:31:316¡¿---- sentU:8,select=1
+¡¾15:48:31:321¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:31:328¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:31:332¡¿---- ==============================
+¡¾15:48:31:338¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:31:344¡¿---- sentU:5,select=1
+¡¾15:48:31:350¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:31:355¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:31:362¡¿---- ==============================
+¡¾15:48:31:367¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:31:760¡¿---- sentU:8,select=1
+¡¾15:48:31:766¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:31:771¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:31:777¡¿---- ==============================
+¡¾15:48:31:782¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:31:788¡¿---- sentU:5,select=1
+¡¾15:48:31:794¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:31:799¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:31:804¡¿---- ==============================
+¡¾15:48:31:810¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:32:198¡¿---- sentU:8,select=1
+¡¾15:48:32:203¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:32:209¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:32:215¡¿---- ==============================
+¡¾15:48:32:220¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:32:228¡¿---- sentU:5,select=1
+¡¾15:48:32:236¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:32:243¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:32:249¡¿---- ==============================
+¡¾15:48:32:254¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:32:665¡¿---- sentU:8,select=1
+¡¾15:48:32:671¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:32:677¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:32:683¡¿---- ==============================
+¡¾15:48:32:688¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:32:695¡¿---- sentU:5,select=1
+¡¾15:48:32:701¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:32:706¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:32:713¡¿---- ==============================
+¡¾15:48:32:719¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:33:142¡¿---- sentU:8,select=1
+¡¾15:48:33:148¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:33:154¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:33:160¡¿---- ==============================
+¡¾15:48:33:166¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:33:172¡¿---- sentU:5,select=1
+¡¾15:48:33:178¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:33:184¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:33:191¡¿---- ==============================
+¡¾15:48:33:198¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:33:635¡¿---- sentU:8,select=1
+¡¾15:48:33:641¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:33:646¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:33:652¡¿---- ==============================
+¡¾15:48:33:659¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:33:664¡¿---- sentU:5,select=1
+¡¾15:48:33:670¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:33:676¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:33:681¡¿---- ==============================
+¡¾15:48:33:687¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:34:103¡¿---- sentU:8,select=1
+¡¾15:48:34:109¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:34:115¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:34:120¡¿---- ==============================
+¡¾15:48:34:127¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:34:133¡¿---- sentU:5,select=1
+¡¾15:48:34:140¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:34:147¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:34:155¡¿---- ==============================
+¡¾15:48:34:162¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:34:555¡¿---- sentU:8,select=1
+¡¾15:48:34:561¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:34:567¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:34:572¡¿---- ==============================
+¡¾15:48:34:579¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:34:584¡¿---- sentU:5,select=1
+¡¾15:48:34:591¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:34:599¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:34:609¡¿---- ==============================
+¡¾15:48:34:615¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:35:020¡¿---- sentU:8,select=1
+¡¾15:48:35:026¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:35:032¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:35:037¡¿---- ==============================
+¡¾15:48:35:044¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:35:049¡¿---- sentU:5,select=1
+¡¾15:48:35:055¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:35:062¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:35:068¡¿---- ==============================
+¡¾15:48:35:074¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:35:464¡¿---- sentU:8,select=1
+¡¾15:48:35:469¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:35:475¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:35:480¡¿---- ==============================
+¡¾15:48:35:486¡¿---- PacketNetSnd:UDP Send:40 03 0A 01 B2 
+¡¾15:48:35:492¡¿---- sentU:5,select=1
+¡¾15:48:35:497¡¿---- PacketNetRcv:UDP Recw:F0 02 0A 04 
+¡¾15:48:35:502¡¿---- PacketNetRcv:UDP Recv:F0 02 0A 04 
+¡¾15:48:35:509¡¿---- ==============================
+¡¾15:48:35:514¡¿---- PacketNetSnd:UDP Send:40 06 EE 01 00 00 00 CB 
+¡¾15:48:35:986¡¿---- sentU:8,select=1
+¡¾15:48:35:992¡¿---- PacketNetRcv:UDP Recw:F4 03 EE 02 19 
+¡¾15:48:35:997¡¿---- PacketNetRcv:UDP Recv:F4 03 EE 02 19 
+¡¾15:48:36:002¡¿---- ==============================

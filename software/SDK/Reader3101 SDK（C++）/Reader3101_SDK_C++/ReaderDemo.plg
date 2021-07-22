@@ -1,0 +1,135 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ReaderDemo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/ReaderDemo.res" /d "_DEBUG" "D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D5.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I ".//INC" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/ReaderDemo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\color.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\ColorListCtrl.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\EnumSerial.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\HeaderCtrlCl.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\ListCtrlCl.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\MyColorList.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\INC\MyHeaderCtrl.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ConnectReader.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\DlgBPAA9.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\DlgRubbish.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\EPCC1G2Test.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ISO6BTest.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\OutputTest.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\Progress.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderDemo.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderDemoDlg.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderDParam.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderModeS.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderParameter.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\ReaderParameterDlg.cpp"
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\TK900Test.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D5.tmp" 
+Creating temporary file "C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D6.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I ".//INC" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/ReaderDemo.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\AppA\Reader\Reader626\Reader1000DemoExtern(VC)\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D6.tmp" 
+Creating temporary file "C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D7.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ReaderDemo.pdb" /debug /machine:I386 /nodefaultlib:"nafxcw.lib" /nodefaultlib:"libc.lib" /out:"ReaderDemo.exe" /pdbtype:sept 
+".\Debug\color.obj"
+".\Debug\ColorListCtrl.obj"
+".\Debug\EnumSerial.obj"
+".\Debug\HeaderCtrlCl.obj"
+".\Debug\ListCtrlCl.obj"
+".\Debug\MyColorList.obj"
+".\Debug\MyHeaderCtrl.obj"
+".\Debug\ConnectReader.obj"
+".\Debug\DlgBPAA9.obj"
+".\Debug\DlgRubbish.obj"
+".\Debug\EPCC1G2Test.obj"
+".\Debug\ISO6BTest.obj"
+".\Debug\OutputTest.obj"
+".\Debug\Progress.obj"
+".\Debug\ReaderDemo.obj"
+".\Debug\ReaderDemoDlg.obj"
+".\Debug\ReaderDParam.obj"
+".\Debug\ReaderModeS.obj"
+".\Debug\ReaderParameter.obj"
+".\Debug\ReaderParameterDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\TK900Test.obj"
+".\Debug\ReaderDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+color.cpp
+ColorListCtrl.cpp
+EnumSerial.cpp
+HeaderCtrlCl.cpp
+ListCtrlCl.cpp
+MyColorList.cpp
+MyHeaderCtrl.cpp
+ConnectReader.cpp
+DlgBPAA9.cpp
+DlgRubbish.cpp
+EPCC1G2Test.cpp
+ISO6BTest.cpp
+OutputTest.cpp
+Progress.cpp
+ReaderDemo.cpp
+ReaderDemoDlg.cpp
+ReaderDParam.cpp
+ReaderModeS.cpp
+ReaderParameter.cpp
+ReaderParameterDlg.cpp
+Generating Code...
+Compiling...
+TK900Test.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D9.tmp" with contents
+[
+/nologo /o"Debug/ReaderDemo.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\color.sbr"
+".\Debug\ColorListCtrl.sbr"
+".\Debug\EnumSerial.sbr"
+".\Debug\HeaderCtrlCl.sbr"
+".\Debug\ListCtrlCl.sbr"
+".\Debug\MyColorList.sbr"
+".\Debug\MyHeaderCtrl.sbr"
+".\Debug\ConnectReader.sbr"
+".\Debug\DlgBPAA9.sbr"
+".\Debug\DlgRubbish.sbr"
+".\Debug\EPCC1G2Test.sbr"
+".\Debug\ISO6BTest.sbr"
+".\Debug\OutputTest.sbr"
+".\Debug\Progress.sbr"
+".\Debug\ReaderDemo.sbr"
+".\Debug\ReaderDemoDlg.sbr"
+".\Debug\ReaderDParam.sbr"
+".\Debug\ReaderModeS.sbr"
+".\Debug\ReaderParameter.sbr"
+".\Debug\ReaderParameterDlg.sbr"
+".\Debug\TK900Test.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\mt\LOCALS~1\Temp\RSP1D9.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+ReaderDemo.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

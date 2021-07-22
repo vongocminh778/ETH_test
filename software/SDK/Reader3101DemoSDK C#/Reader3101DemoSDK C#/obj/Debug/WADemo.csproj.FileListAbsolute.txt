@@ -1,0 +1,25 @@
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\ResolveAssemblyReference.cache
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.Properties.Resources.resources
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\ReaderDemo.MainForm.resources
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.csproj.GenerateResource.Cache
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.exe
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.pdb
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\WADemo.exe
+D:\App\Reader\Reader626\ReaderC#WDemo\WADemo\WADemo.pdb
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.exe
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.pdb
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\ResolveAssemblyReference.cache
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.Properties.Resources.resources
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\ReaderDemo.MainForm.resources
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\obj\Debug\WADemo.csproj.GenerateResource.Cache
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\WADemo.exe
+D:\AppA\Reader\Reader626\ReaderC#WDemo\WADemo\WADemo.pdb
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.csprojAssemblyReference.cache
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.Properties.Resources.resources
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\ReaderDemo.MainForm.resources
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.csproj.GenerateResource.cache
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.csproj.CoreCompileInputs.cache
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.exe
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\obj\Debug\WADemo.pdb
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\WADemo.exe
+C:\Users\mic1\Desktop\RL-R65 Documents\SDK\Reader3101DemoSDK C#\Reader3101DemoSDK C#\WADemo.pdb

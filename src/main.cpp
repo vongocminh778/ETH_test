@@ -6,7 +6,7 @@
 #include <ETH.h>
 #include <WiFiUdp.h>
 #include <WiFi.h>
-#include "SparkFun_UHF_RFID_Reader.h"
+#include "RL65_RFID_Reader.h"
 
 /* 
    * ETH_CLOCK_GPIO0_IN   - default: external clock from crystal oscillator

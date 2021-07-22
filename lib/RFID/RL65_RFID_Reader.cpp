@@ -23,6 +23,11 @@ void RFID::begin(int _p, char * _add){
 //Get the version number from the module
 void RFID::getVersion(void)
 {
+  sendMessage(TMR_SR_OPCODE_VERSION);
+}
+
+void RFID::readTagEPC(void)
+{
   // Serial.print("version: ");
   // sendMessage(TMR_SR_OPCODE_VERSION);
   uint8_t configBlob[] = {0x01, 0x00, 0x00, 0x00};
@@ -44,10 +49,8 @@ void RFID::sendMessage(uint8_t opcode, uint8_t *data, uint8_t size, uint16_t tim
 
 void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
 {
-  unsigned long start= micros();
   msg[0] = 0x40; //Universal header
   int messageLength = msg[1] - 2;
-  uint8_t opcode = msg[2]; //Used to see if response from module has the same opcode
   uint8_t crc = CheckSum(&msg[0], messageLength + 3);
   msg[messageLength + 3] = crc;
 

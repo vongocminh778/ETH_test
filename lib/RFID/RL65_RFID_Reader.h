@@ -66,6 +66,7 @@ public:
   RFID(void);
   void begin(int _p, char * _add);
   void getVersion(void);
+  void readTagEPC(void);
   void sendMessage(uint8_t opcode, uint8_t *data = 0, uint8_t size = 0, uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void sendCommand(uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void printHex(uint8_t num);

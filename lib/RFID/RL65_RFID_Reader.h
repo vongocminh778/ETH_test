@@ -18,7 +18,7 @@
 #define TMR_SR_OPCODE_GET_POWER_MODE 0x68
 #define TMR_SR_OPCODE_GET_READER_OPTIONAL_PARAMS 0x6A
 #define TMR_SR_OPCODE_GET_PROTOCOL_PARAM 0x6B
-#define TMR_SR_OPCODE_SET_ANTENNA_PORT 0x91
+#define TMR_SR_OPCODE_SET_ANTENNA_PORT 0x0A
 #define TMR_SR_OPCODE_SET_TAG_PROTOCOL 0x93
 #define TMR_SR_OPCODE_SET_READ_TX_POWER 0x92
 #define TMR_SR_OPCODE_SET_WRITE_TX_POWER 0x94
@@ -65,7 +65,13 @@ class RFID : public WiFiUDP
 public:
   RFID(void);
   void begin(int _p, char * _add);
+
+  void setBaud(long baudRate);
+
   void getVersion(void);
+
+  void setAntennaPort();
+
   void readTagEPC(void);
   void sendMessage(uint8_t opcode, uint8_t *data = 0, uint8_t size = 0, uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void sendCommand(uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);

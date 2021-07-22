@@ -108,7 +108,8 @@ void loop() {
   // Serial.println(hexToDec("10EC"));
   Serial.println();
   if (eth_connected) {
-    nano.readTagEPC(); 
+    nano.setAntennaPort();
+    // nano.readTagEPC(); 
   }
   
   // delay(10);

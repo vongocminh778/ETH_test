@@ -20,10 +20,28 @@ void RFID::begin(int _p, char * _add){
   _udpAddress = _add;
 }
 
+void RFID::setBaud(long baudRate)
+{
+  //Copy this setting into a temp data array
+  uint8_t size = sizeof(baudRate);
+  uint8_t data[size];
+  for (uint8_t x = 0; x < size; x++)
+    data[x] = (uint8_t)(baudRate >> (8 * (size - 1 - x)));
+
+  sendMessage(TMR_SR_OPCODE_SET_BAUD_RATE, data, size, COMMAND_TIME_OUT, false);
+}
+
 //Get the version number from the module
 void RFID::getVersion(void)
 {
   sendMessage(TMR_SR_OPCODE_VERSION);
+}
+// Function: Select antenna
+// Commmand packet: 40H  03H  0AH  No.  CheckSum
+void RFID::setAntennaPort(void)
+{
+  uint8_t configBlob[] = {0x01}; //01H antenna 1 -- 02H antenna 2 -- 03H antenna 3 -- 04H antenna 4
+  sendMessage(TMR_SR_OPCODE_SET_ANTENNA_PORT, configBlob, sizeof(configBlob));
 }
 
 void RFID::readTagEPC(void)
@@ -33,6 +51,8 @@ void RFID::readTagEPC(void)
   uint8_t configBlob[] = {0x01, 0x00, 0x00, 0x00};
   sendMessage(0xEE, configBlob, sizeof(configBlob));
 }
+
+
 
 //Given an opcode, a piece of data, and the size of that data, package up a sentence and send it
 void RFID::sendMessage(uint8_t opcode, uint8_t *data, uint8_t size, uint16_t timeOut, boolean waitForResponse)
@@ -54,9 +74,11 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
   uint8_t crc = CheckSum(&msg[0], messageLength + 3);
   msg[messageLength + 3] = crc;
 
-  // for (uint8_t x = 0; x < messageLength + 4; x++){
-  //   printHex(msg[x]);
-  // }
+  Serial.print("Command: ");
+  for (uint8_t x = 0; x < messageLength + 4; x++){
+    printHex(msg[x]);
+  }
+  Serial.println();
 
   _Udp.beginPacket(_udpAddress, _localUdpPort);
   _Udp.write((const uint8_t*)msg, messageLength + 4);

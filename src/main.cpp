@@ -108,11 +108,34 @@ void loop() {
   // Serial.println(hexToDec("10EC"));
   Serial.println();
   if (eth_connected) {
-    nano.setAntennaPort();
+    byte myEPC[12]; //Most EPCs are 12 bytes
+    byte myEPClength;
+    byte responseType = 0;
+
+    while (responseType != RESPONSE_SUCCESS)//RESPONSE_IS_TAGFOUND)
+    {
+      myEPClength = sizeof(myEPC); //Length of EPC is modified each time .readTagEPC is called
+
+      responseType = nano.readTagEPC(myEPC, myEPClength, 500); //Scan for a new tag up to 500ms
+      Serial.println(F("Searching for tag"));
+      // delay(500);
+    }
+    //Print EPC
+  Serial.print(F(" epc["));
+  for (byte x = 0 ; x < myEPClength ; x++)
+  {
+    if (myEPC[x] < 0x10) Serial.print(F("0"));
+    Serial.print(myEPC[x], HEX);
+    Serial.print(F(" "));
+  }
+  Serial.println(F("]"));
+
+    // nano.setOutputPower(51);
+    // nano.setAntennaPort();
     // nano.readTagEPC(); 
   }
   
-  // delay(10);
+  delay(1000);
 }
 
 void printHex(uint8_t num) {

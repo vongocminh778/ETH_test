@@ -44,12 +44,61 @@ void RFID::setAntennaPort(void)
   sendMessage(TMR_SR_OPCODE_SET_ANTENNA_PORT, configBlob, sizeof(configBlob));
 }
 
-void RFID::readTagEPC(void)
+void RFID::setOutputPower(int8_t powerSetting)
 {
-  // Serial.print("version: ");
-  // sendMessage(TMR_SR_OPCODE_VERSION);
-  uint8_t configBlob[] = {0x01, 0x00, 0x00, 0x00};
-  sendMessage(0xEE, configBlob, sizeof(configBlob));
+  if (powerSetting > 63)
+    powerSetting = 63; //Limit to 63
+  if(powerSetting < 0)
+    powerSetting = 0; 
+  //Copy this setting into a temp data array
+  uint8_t size = sizeof(powerSetting);
+  uint8_t data[size];
+  for (uint8_t x = 0; x < size; x++){
+    data[x] = (uint8_t)(powerSetting >> (8 * (size - 1 - x)));// convert hex to dec
+  }
+  sendMessage(TMR_SR_OPCODE_SET_OUTPUT_POWER, data, size);
+}
+
+// void RFID::readTagEPC(void)
+// {
+//   // Serial.print("version: ");
+//   // sendMessage(TMR_SR_OPCODE_VERSION);
+//   uint8_t configBlob[] = {0x01, 0x00, 0x00, 0x00};
+//   sendMessage(0xEE, configBlob, sizeof(configBlob));
+// }
+
+uint8_t RFID::readTagEPC(uint8_t *epc, uint8_t &epcLength, uint16_t timeOut)
+{
+  uint8_t bank = 0x01;    //memory bank -- 01.EPC -- 02.TID -- 03.User
+  uint16_t address = 0x0000; 
+  uint8_t len = 0x00;
+  return (readData(bank, address, len, epc, epcLength, timeOut));
+}
+uint8_t RFID::readData(uint8_t bank, uint32_t address, uint8_t len, uint8_t *dataRead, uint8_t &dataLengthRead, uint16_t timeOut)
+{
+  uint8_t data[4];
+  //Insert timeout
+  data[0] = bank;
+  data[1] = address >> 8 & 0xFF;
+  data[2] = address & 0xFF;
+  data[3] = len;
+
+  sendMessage(TMR_SR_OPCODE_READ_TAG_DATA, data, sizeof(data), timeOut);
+
+  if (msg[0] == 0xF0)
+  {
+    Serial.print("mmmmmm: ");
+    for (uint8_t x = 0; x < dataLengthRead; x++){
+      dataRead[x] = msg[4 + x];
+      printHex(dataRead[x]);
+    }
+    Serial.println();
+    return (RESPONSE_SUCCESS);
+  }
+  Serial.println();
+  dataLengthRead = 0; //Inform caller that we weren't able to read anything
+
+  return (RESPONSE_FAIL);
 }
 
 
@@ -87,14 +136,18 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
   _Udp.parsePacket();
 
   //receive response from server, it will be HELLO WORLD
-  if(_Udp.read(msg, 10) > 0){
-    Serial.print("Server to client: ");
-    Serial.println("Lenght: "+ String(int(msg[1]) + 2));
-    for(int i=0; i<int(msg[1]) + 2; i++){
-      printHex(msg[i]);
-    }
+  if(_Udp.read(msg, 50) > 0){
+    // msg[0] = ALL_GOOD;
+    // Serial.print("Server to client: ");
+    // Serial.println("Lenght: "+ String(int(msg[1]) + 2));
+    // for(int i=0; i<int(msg[1]) + 2; i++){
+    //   printHex(msg[i]);
+    // }
   }
   Serial.println();
+
+   //If everything is ok, load all ok into msg array
+  
 }
 void RFID::printHex(uint8_t num) {
   char hexCar[2];

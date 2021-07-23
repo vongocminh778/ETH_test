@@ -10,7 +10,7 @@
 #define TMR_SR_OPCODE_WRITE_TAG_ID 0x23
 #define TMR_SR_OPCODE_WRITE_TAG_DATA 0x24
 #define TMR_SR_OPCODE_KILL_TAG 0x26
-#define TMR_SR_OPCODE_READ_TAG_DATA 0x28
+#define TMR_SR_OPCODE_READ_TAG_DATA 0xEE
 #define TMR_SR_OPCODE_CLEAR_TAG_ID_BUFFER 0x2A
 #define TMR_SR_OPCODE_MULTI_PROTOCOL_TAG_OP 0x2F
 #define TMR_SR_OPCODE_GET_READ_TX_POWER 0x62
@@ -20,7 +20,7 @@
 #define TMR_SR_OPCODE_GET_PROTOCOL_PARAM 0x6B
 #define TMR_SR_OPCODE_SET_ANTENNA_PORT 0x0A
 #define TMR_SR_OPCODE_SET_TAG_PROTOCOL 0x93
-#define TMR_SR_OPCODE_SET_READ_TX_POWER 0x92
+#define TMR_SR_OPCODE_SET_OUTPUT_POWER 0x04
 #define TMR_SR_OPCODE_SET_WRITE_TX_POWER 0x94
 #define TMR_SR_OPCODE_SET_REGION 0x97
 #define TMR_SR_OPCODE_SET_READER_OPTIONAL_PARAMS 0x9A
@@ -71,8 +71,11 @@ public:
   void getVersion(void);
 
   void setAntennaPort();
+  void setOutputPower(int8_t powerSetting);
 
   void readTagEPC(void);
+  uint8_t readTagEPC(uint8_t *epc, uint8_t &epcLength, uint16_t timeOut);
+  uint8_t readData(uint8_t bank, uint32_t address, uint8_t len, uint8_t *dataRead, uint8_t &dataLengthRead, uint16_t timeOut);
   void sendMessage(uint8_t opcode, uint8_t *data = 0, uint8_t size = 0, uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void sendCommand(uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void printHex(uint8_t num);

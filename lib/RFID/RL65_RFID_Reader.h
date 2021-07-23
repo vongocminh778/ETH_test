@@ -1,7 +1,7 @@
 #include "Arduino.h" //Needed for Stream
 #include "WiFiUdp.h"
 
-#define MAX_MSG_SIZE 255
+#define MAX_MSG_SIZE 20
 
 #define TMR_SR_OPCODE_VERSION 0x02
 #define TMR_SR_OPCODE_SET_BAUD_RATE 0x06

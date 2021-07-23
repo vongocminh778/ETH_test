@@ -7,6 +7,7 @@
 #include <WiFiUdp.h>
 #include <WiFi.h>
 #include "RL65_RFID_Reader.h"
+#include <HTTPClient.h>
 
 /* 
    * ETH_CLOCK_GPIO0_IN   - default: external clock from crystal oscillator
@@ -21,10 +22,7 @@
 #define ETH_MDC_PIN     23
 #define ETH_MDIO_PIN    18
 #define ETH_POWER_PIN_ALTERNATIVE 16 // 17    // ???
-
-#define MAX_MSG_SIZE 255
-#define COMMAND_TIME_OUT 2000 //Number of ms before stop waiting for response from modul
-uint8_t msg[MAX_MSG_SIZE];
+#define alarm 2
 
 RFID nano; //Create instance
 
@@ -33,6 +31,7 @@ char* udpAddress = "192.168.0.100";
 
 const char* ssid = "Matsuya MIC";
 const char* password = "M@tsuyaR&D2020";
+const char *test_rfid = "http://113.161.152.35:2030/api/Mobile/testrfid";
 
 IPAddress local_ip(192,168,0,99);
 IPAddress gateway(192,168,0,1);
@@ -80,12 +79,16 @@ void WiFiEvent(WiFiEvent_t event) {
 }
 
 void printHex(uint8_t num);
+void Send_data_firmware(String _path, String rfid);
 
 void setup() {
   pinMode(ETH_POWER_PIN_ALTERNATIVE, OUTPUT);
   digitalWrite(ETH_POWER_PIN_ALTERNATIVE, HIGH);
   Serial.begin(115200);
-
+  //setup alarm
+  pinMode(alarm, OUTPUT);
+  digitalWrite(alarm, LOW);
+  
   WiFi.onEvent(WiFiEvent);
   ETH.begin(ETH_ADDR, ETH_POWER_PIN, ETH_MDC_PIN, ETH_MDIO_PIN, ETH_TYPE, ETH_CLK_MODE);
   WiFi.begin(ssid, password);
@@ -104,9 +107,7 @@ void setup() {
 
 
 void loop() {
-  // Serial.println("\nLoop ...!\n");
-  // Serial.println(hexToDec("10EC"));
-  Serial.println();
+  // Serial.println();
   if (eth_connected) {
     byte myEPC[12]; //Most EPCs are 12 bytes
     byte myEPClength;
@@ -117,25 +118,30 @@ void loop() {
       myEPClength = sizeof(myEPC); //Length of EPC is modified each time .readTagEPC is called
 
       responseType = nano.readTagEPC(myEPC, myEPClength, 500); //Scan for a new tag up to 500ms
-      Serial.println(F("Searching for tag"));
+      // Serial.println(F("Searching for tag"));
       // delay(500);
     }
     //Print EPC
+  String str = "";
   Serial.print(F(" epc["));
   for (byte x = 0 ; x < myEPClength ; x++)
   {
-    if (myEPC[x] < 0x10) Serial.print(F("0"));
+    if (myEPC[x] < 0x10) {
+      Serial.print(F("0"));
+      str += "0";
+    }
+    str += String((uint8_t)myEPC[x],HEX);
     Serial.print(myEPC[x], HEX);
     Serial.print(F(" "));
   }
   Serial.println(F("]"));
-
+  
+  Serial.println("rfid: " + str);
+  Send_data_firmware(test_rfid, str);
     // nano.setOutputPower(51);
     // nano.setAntennaPort();
     // nano.readTagEPC(); 
   }
-  
-  delay(1000);
 }
 
 void printHex(uint8_t num) {
@@ -143,6 +149,34 @@ void printHex(uint8_t num) {
 
   sprintf(hexCar, "%02X", num);
   Serial.print(hexCar);
+}
+
+void Send_data_firmware(String _path, String rfid)
+{
+    HTTPClient http;
+    http.begin(_path);
+    String data_confirm ="{\"message\" : \"";
+    data_confirm += rfid;  
+    data_confirm += "\"}\n"; 
+    // Serial.println(data_confirm);
+    http.addHeader("Content-Type", "application/json");
+    int httpResponseCode = http.sendRequest("POST", (uint8_t *)data_confirm.c_str(), data_confirm.length());
+    if(httpResponseCode>0)
+    {
+      digitalWrite(alarm, HIGH);
+      delay(100);
+      digitalWrite(alarm, LOW);
+      String url_firmware = http.getString();    
+      Serial.println(url_firmware);//Get the response to the request
+      Serial.println(httpResponseCode);   //Print return code     
+   }
+   else
+   {
+      Serial.print(F("Error on sending POST: "));
+      Serial.println(httpResponseCode);
+   }
+      http.end();
+      ESP.getFreeHeap();
 }
 
 

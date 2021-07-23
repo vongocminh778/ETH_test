@@ -87,15 +87,15 @@ uint8_t RFID::readData(uint8_t bank, uint32_t address, uint8_t len, uint8_t *dat
 
   if (msg[0] == 0xF0)
   {
-    Serial.print("mmmmmm: ");
+    // Serial.print("mmmmmm: ");
     for (uint8_t x = 0; x < dataLengthRead; x++){
-      dataRead[x] = msg[4 + x];
-      printHex(dataRead[x]);
+      dataRead[x] = msg[5 + x];
+      // printHex(dataRead[x]);
     }
-    Serial.println();
+    // Serial.println();
     return (RESPONSE_SUCCESS);
   }
-  Serial.println();
+  // Serial.println();
   dataLengthRead = 0; //Inform caller that we weren't able to read anything
 
   return (RESPONSE_FAIL);
@@ -123,11 +123,11 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
   uint8_t crc = CheckSum(&msg[0], messageLength + 3);
   msg[messageLength + 3] = crc;
 
-  Serial.print("Command: ");
-  for (uint8_t x = 0; x < messageLength + 4; x++){
-    printHex(msg[x]);
-  }
-  Serial.println();
+  // Serial.print("Command: ");
+  // for (uint8_t x = 0; x < messageLength + 4; x++){
+  //   printHex(msg[x]);
+  // }
+  // Serial.println();
 
   _Udp.beginPacket(_udpAddress, _localUdpPort);
   _Udp.write((const uint8_t*)msg, messageLength + 4);
@@ -136,7 +136,7 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
   _Udp.parsePacket();
 
   //receive response from server, it will be HELLO WORLD
-  if(_Udp.read(msg, 50) > 0){
+  if(_Udp.read(msg, 20) > 0){
     // msg[0] = ALL_GOOD;
     // Serial.print("Server to client: ");
     // Serial.println("Lenght: "+ String(int(msg[1]) + 2));
@@ -144,7 +144,7 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
     //   printHex(msg[i]);
     // }
   }
-  Serial.println();
+  // Serial.println();
 
    //If everything is ok, load all ok into msg array
   

@@ -96,14 +96,6 @@ void setup() {
   WiFi.onEvent(WiFiEvent);
   ETH.begin(ETH_ADDR, ETH_POWER_PIN, ETH_MDC_PIN, ETH_MDIO_PIN, ETH_TYPE, ETH_CLK_MODE);
   wifiConnect();
-  // WiFi.begin(ssid, password);
-
-  // while (WiFi.status() != WL_CONNECTED)
-  // {
-  //   Serial.print(".");  delay(1000); 
-  // }
-  // Serial.println(ssid);
-  // Serial.println(WiFi.localIP());
 
   ETH.config(local_ip, gateway, subnet, dns1, dns2);
   nano.begin(localUdpPort, udpAddress);

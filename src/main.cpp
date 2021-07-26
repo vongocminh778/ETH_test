@@ -31,13 +31,16 @@ char* udpAddress = "192.168.0.100";
 
 const char* ssid = "Matsuya MIC";
 const char* password = "M@tsuyaR&D2020";
-const char *test_rfid = "http://113.161.152.35:2030/api/Mobile/testrfid";
+const char *test_rfid = "http://113.161.152.35/Webservice/api/Mobile/boxidtest";
 
 IPAddress local_ip(192,168,0,99);
 IPAddress gateway(192,168,0,1);
 IPAddress subnet(255,255,255,0);
 IPAddress dns1(8,8,8,8);
 IPAddress dns2 = (uint32_t)0x00000000;
+
+byte response_setmanual;
+String rfid_old;
 
 static bool eth_connected = false;
 
@@ -50,7 +53,7 @@ void WiFiEvent(WiFiEvent_t event) {
       break;
     case SYSTEM_EVENT_ETH_CONNECTED:
       Serial.println("ETH Connected");
-      eth_connected = true;
+      // eth_connected = true;
       break;
     case SYSTEM_EVENT_ETH_GOT_IP:
       Serial.print("ETH MAC: ");
@@ -80,6 +83,7 @@ void WiFiEvent(WiFiEvent_t event) {
 
 void printHex(uint8_t num);
 void Send_data_firmware(String _path, String rfid);
+void wifiConnect();
 
 void setup() {
   pinMode(ETH_POWER_PIN_ALTERNATIVE, OUTPUT);
@@ -91,25 +95,35 @@ void setup() {
   
   WiFi.onEvent(WiFiEvent);
   ETH.begin(ETH_ADDR, ETH_POWER_PIN, ETH_MDC_PIN, ETH_MDIO_PIN, ETH_TYPE, ETH_CLK_MODE);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED)
-  {
-    Serial.print(".");  delay(100); 
-  }
-  Serial.println(ssid);
-  Serial.println(WiFi.localIP());
+  wifiConnect();
+  // WiFi.begin(ssid, password);
+
+  // while (WiFi.status() != WL_CONNECTED)
+  // {
+  //   Serial.print(".");  delay(1000); 
+  // }
+  // Serial.println(ssid);
+  // Serial.println(WiFi.localIP());
 
   ETH.config(local_ip, gateway, subnet, dns1, dns2);
   nano.begin(localUdpPort, udpAddress);
+  // nano.enableDebugging(Serial);
+  nano.disableDebugging();
+  response_setmanual = 0;
 
   Serial.println("Setup done!\n");
 }
 
 
 void loop() {
-  // Serial.println();
   if (eth_connected) {
-    byte myEPC[12]; //Most EPCs are 12 bytes
+    while (response_setmanual != RESPONSE_SUCCESS)//RESPONSE_IS_TAGFOUND)
+    {
+      response_setmanual = nano.setParammanual();
+      delay(1000);
+    }
+    if(response_setmanual == RESPONSE_SUCCESS){
+      byte myEPC[12]; //Most EPCs are 12 bytes
     byte myEPClength;
     byte responseType = 0;
 
@@ -122,25 +136,26 @@ void loop() {
       // delay(500);
     }
     //Print EPC
-  String str = "";
-  Serial.print(F(" epc["));
-  for (byte x = 0 ; x < myEPClength ; x++)
-  {
-    if (myEPC[x] < 0x10) {
-      Serial.print(F("0"));
-      str += "0";
+    String str = "";
+    Serial.print(F(" epc["));
+    for (byte x = 0 ; x < myEPClength ; x++)
+    {
+      if (myEPC[x] < 0x10) {
+        Serial.print(F("0"));
+        str += "0";
+      }
+      str += String((uint8_t)myEPC[x],HEX);
+      Serial.print(myEPC[x], HEX);
+      Serial.print(F(" "));
     }
-    str += String((uint8_t)myEPC[x],HEX);
-    Serial.print(myEPC[x], HEX);
-    Serial.print(F(" "));
-  }
-  Serial.println(F("]"));
-  
-  Serial.println("rfid: " + str);
-  Send_data_firmware(test_rfid, str);
-    // nano.setOutputPower(51);
-    // nano.setAntennaPort();
-    // nano.readTagEPC(); 
+    Serial.println(F("]"));
+    
+    if(str != rfid_old){
+      Serial.println("rfid: " + str);
+      Send_data_firmware(test_rfid, str);
+    }
+    rfid_old = str;
+    }
   }
 }
 
@@ -155,7 +170,7 @@ void Send_data_firmware(String _path, String rfid)
 {
     HTTPClient http;
     http.begin(_path);
-    String data_confirm ="{\"message\" : \"";
+    String data_confirm ="{\"rfid\" : \"";
     data_confirm += rfid;  
     data_confirm += "\"}\n"; 
     // Serial.println(data_confirm);
@@ -177,6 +192,22 @@ void Send_data_firmware(String _path, String rfid)
    }
       http.end();
       ESP.getFreeHeap();
+}
+
+void wifiConnect()
+{
+  if (WiFi.status() != WL_CONNECTED) {
+    WiFi.disconnect(true);
+    delay(1000);
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED)
+    {
+      Serial.print(".");  delay(1000); 
+    }
+    Serial.println(ssid);
+    Serial.println(WiFi.localIP());
+    return;
+  }
 }
 
 

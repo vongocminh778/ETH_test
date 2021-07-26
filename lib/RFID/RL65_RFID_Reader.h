@@ -1,7 +1,8 @@
 #include "Arduino.h" //Needed for Stream
 #include "WiFiUdp.h"
 
-#define MAX_MSG_SIZE 20
+#define MAX_MSG_SIZE 40
+#define MAX_FLAG_SIZE 1
 
 #define TMR_SR_OPCODE_VERSION 0x02
 #define TMR_SR_OPCODE_SET_BAUD_RATE 0x06
@@ -23,7 +24,7 @@
 #define TMR_SR_OPCODE_SET_OUTPUT_POWER 0x04
 #define TMR_SR_OPCODE_SET_WRITE_TX_POWER 0x94
 #define TMR_SR_OPCODE_SET_REGION 0x97
-#define TMR_SR_OPCODE_SET_READER_OPTIONAL_PARAMS 0x9A
+#define TMR_SR_OPCODE_SET_PARAM_MANUAL 0x09
 #define TMR_SR_OPCODE_SET_PROTOCOL_PARAM 0x9B
 
 #define COMMAND_TIME_OUT 2000 //Number of ms before stop waiting for response from module
@@ -66,11 +67,15 @@ public:
   RFID(void);
   void begin(int _p, char * _add);
 
+  void enableDebugging(Stream &debugPort = Serial); //Turn on command sending and response printing. If user doesn't specify then Serial will be used
+  void disableDebugging(void);
+
   void setBaud(long baudRate);
 
   void getVersion(void);
 
   void setAntennaPort();
+  uint8_t setParammanual(void);
   void setOutputPower(int8_t powerSetting);
 
   void readTagEPC(void);
@@ -80,10 +85,13 @@ public:
   void sendCommand(uint16_t timeOut = COMMAND_TIME_OUT, boolean waitForResponse = true);
   void printHex(uint8_t num);
   uint8_t CheckSum(unsigned char* uBuff, unsigned char uBuffLen);
+  void printMessageArray(void);
 
   uint8_t msg[MAX_MSG_SIZE];
+  uint8_t flag[MAX_FLAG_SIZE];
 
 private:
+  Stream *_debugSerial; //The stream to send debug messages to if enabled
   uint8_t _head = 0; //Tracks the length of the incoming message as we poll the software serial
   boolean _printDebug = false; //Flag to print the serial commands we are sending to the Serial port for debug
 };

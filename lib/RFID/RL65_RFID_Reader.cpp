@@ -20,6 +20,18 @@ void RFID::begin(int _p, char * _add){
   _udpAddress = _add;
 }
 
+void RFID::enableDebugging(Stream &debugPort)
+{
+  _debugSerial = &debugPort; //Grab which port the user wants us to use for debugging
+
+  _printDebug = true; //Should we print the commands we send? Good for debugging
+}
+
+void RFID::disableDebugging(void)
+{
+  _printDebug = false; //Turn off extra print statements
+}
+
 void RFID::setBaud(long baudRate)
 {
   //Copy this setting into a temp data array
@@ -42,6 +54,19 @@ void RFID::setAntennaPort(void)
 {
   uint8_t configBlob[] = {0x01}; //01H antenna 1 -- 02H antenna 2 -- 03H antenna 3 -- 04H antenna 4
   sendMessage(TMR_SR_OPCODE_SET_ANTENNA_PORT, configBlob, sizeof(configBlob));
+}
+
+uint8_t RFID::setParammanual(void)
+{
+  //These are parameters gleaned from inspecting the 'Transport Logs' of the Universal Reader Assistant
+  //And from serial_reader_l3.c
+  uint8_t configBlob[] = {0x08, 0x05, 0x01, 0x3F, 0x00, 0x01, 0x01, 0x0A, 0x04, 0x00, 0x00, 0x00, 0xC0, 0xA8, 0x00, 0x64, 0x07, 0xB1, 0xFF, 0xFF, 0xFF, 0x00, 0xC0, 0xA8, 0x00, 0x01, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
+
+  sendMessage(TMR_SR_OPCODE_SET_PARAM_MANUAL, configBlob, sizeof(configBlob));
+  if (flag[0] == ALL_GOOD && msg[0] == 0xF0){
+    return (RESPONSE_SUCCESS);
+  }
+  return (RESPONSE_FAIL);
 }
 
 void RFID::setOutputPower(int8_t powerSetting)
@@ -85,7 +110,7 @@ uint8_t RFID::readData(uint8_t bank, uint32_t address, uint8_t len, uint8_t *dat
 
   sendMessage(TMR_SR_OPCODE_READ_TAG_DATA, data, sizeof(data), timeOut);
 
-  if (msg[0] == 0xF0)
+  if (flag[0] == ALL_GOOD && msg[0] == 0xF0)
   {
     // Serial.print("mmmmmm: ");
     for (uint8_t x = 0; x < dataLengthRead; x++){
@@ -120,8 +145,15 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
 {
   msg[0] = 0x40; //Universal header
   int messageLength = msg[1] - 2;
+  uint8_t opcode = msg[2];
   uint8_t crc = CheckSum(&msg[0], messageLength + 3);
   msg[messageLength + 3] = crc;
+
+  if (_printDebug == true)
+  {
+    _debugSerial->print(F("sendCommand: "));
+    printMessageArray();
+  }
 
   // Serial.print("Command: ");
   // for (uint8_t x = 0; x < messageLength + 4; x++){
@@ -136,19 +168,53 @@ void RFID::sendCommand(uint16_t timeOut, boolean waitForResponse)
   _Udp.parsePacket();
 
   //receive response from server, it will be HELLO WORLD
-  if(_Udp.read(msg, 20) > 0){
-    // msg[0] = ALL_GOOD;
-    // Serial.print("Server to client: ");
-    // Serial.println("Lenght: "+ String(int(msg[1]) + 2));
-    // for(int i=0; i<int(msg[1]) + 2; i++){
-    //   printHex(msg[i]);
-    // }
+  if(_Udp.read(msg, 40) > 0){
+    // Check sum
+    messageLength = msg[1];
+    if((CheckSum(&msg[0], messageLength + 1) == msg[messageLength + 1]) && msg[2] == opcode){
+      flag[0] = ALL_GOOD;
+      if(_printDebug == true)
+      {
+        _debugSerial->print(F("response: "));
+        printMessageArray();
+      }
+    }
+    else{
+      flag[0] = ERROR_WRONG_OPCODE_RESPONSE;
+      if (_printDebug == true)
+        _debugSerial->println(F("Wrong opcode and checksum response"));
+      return;
+    }
   }
-  // Serial.println();
-
-   //If everything is ok, load all ok into msg array
-  
+  else{
+    if (_printDebug == true)
+      _debugSerial->println(F("Corrupt response"));
+    return;
+  }
 }
+
+//Print the current message array - good for debugging, looking at how the module responded
+//TODO Don't hardcode the serial stream
+void RFID::printMessageArray(void)
+{
+  if (_printDebug == true) //If user hasn't enabled debug we don't know what port to debug to
+  {
+    uint8_t amtToPrint = msg[1] + 2;
+    if (amtToPrint > MAX_MSG_SIZE)
+      amtToPrint = MAX_MSG_SIZE; //Limit this size
+
+    for (uint16_t x = 0; x < amtToPrint; x++)
+    {
+      _debugSerial->print(" [");
+      if (msg[x] < 0x10)
+        _debugSerial->print("0");
+      _debugSerial->print(msg[x], HEX);
+      _debugSerial->print("]");
+    }
+    _debugSerial->println();
+  }
+}
+
 void RFID::printHex(uint8_t num) {
   char hexCar[2];
 
